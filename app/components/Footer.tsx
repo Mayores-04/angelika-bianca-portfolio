@@ -25,16 +25,16 @@ export default function Footer() {
 						<h4 className="text-base font-semibold mb-2">Quick Links</h4>
 						<ul className="space-y-1 text-sm">
 							<li>
-								<Link href="#about" className="hover:underline hover:text-black transition-colors">About Me</Link>
+								<Link href="/AboutMe" className="hover:underline hover:text-black transition-colors">About Me</Link>
 							</li>
 							<li>
-								<Link href="#my-designs" className="hover:underline hover:text-black transition-colors">My Designs</Link>
+								<Link href="/MyDesigns" className="hover:underline hover:text-black transition-colors">My Designs</Link>
 							</li>
 							<li>
-								<Link href="#business" className="hover:underline hover:text-black transition-colors">My Business</Link>
+								<a href="https://facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-black transition-colors">My Business</a>
 							</li>
 							<li>
-								<Link href="#contact" className="hover:underline hover:text-black transition-colors">Contact</Link>
+								<Link href="/Contact" className="hover:underline hover:text-black transition-colors">Contact</Link>
 							</li>
 						</ul>
 					</div>
@@ -43,16 +43,16 @@ export default function Footer() {
 					<div className="md:w-1/3 flex flex-col items-start md:items-end">
 						<h4 className="text-base font-semibold mb-2">Connect</h4>
 						<div className="flex items-center gap-2 mt-1">
-							<a href="#" aria-label="Facebook" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
+							<a href="https://facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
 								<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 2h-3a4 4 0 0 0-4 4v3H7v4h4v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3V2z" /></svg>
 							</a>
-							<a href="#" aria-label="Instagram" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
+							<a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
 								<Instagram size={16} />
 							</a>
-							<a href="mailto:hello@example.com" aria-label="Email" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
+							<a href="mailto:hello@example.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
 								<Mail size={16} />
 							</a>
-							<a href="#" aria-label="Message" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
+							<a href="sms:09701275112" target="_blank" rel="noopener noreferrer" aria-label="Message" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black transition-colors">
 								<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
 							</a>
 						</div>
