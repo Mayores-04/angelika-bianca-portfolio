@@ -21,14 +21,14 @@ export default function Home() {
 								<div className="content">
 									<div className="w-36 h-36 rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
 										<Image 
-											src="/image/Bianca.PNG" 
+											src="/image/Bianca.png" 
 											alt="Angelika Bianca L. Upao" 
 											width={150}
 											height={150}
 											className="object-fill w-full h-full" 
 											priority 
 										/>
-										
+
 									</div>
 									<span className="block mt-4 text-lg font-bold text-black">Angelika Bianca L. Upao</span>
 									<span className="block text-xs text-gray-700">Multimedia Artist & Entrepreneur</span>

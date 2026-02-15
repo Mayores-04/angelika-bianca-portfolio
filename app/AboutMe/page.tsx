@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <div className="relative w-80 h-90">
                   <div className="absolute left-[-55] top-15 w-60 h-72 rounded-2xl overflow-hidden z-0 ">
                     <Image
-                      src="/image/AboutMePic.PNG"
+                      src="/image/AboutMePic.png"
                       alt="Angelika Bianca L. Upao"
                       fill
                       className="object-contain"
@@ -35,7 +35,7 @@ export default function AboutPage() {
 
                   <div className="absolute left-34 top-0 w-60 h-76 rounded-2xl overflow-hidden z-10">
                     <Image
-                      src="/image/AboutMePic.PNG"
+                      src="/image/AboutMePic.png"
                       alt="Angelika Bianca L. Upao"
                       fill
                       className="object-contain"
