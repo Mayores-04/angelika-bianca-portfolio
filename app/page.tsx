@@ -28,6 +28,7 @@ export default function Home() {
 											className="object-fill w-full h-full" 
 											priority 
 										/>
+										
 									</div>
 									<span className="block mt-4 text-lg font-bold text-black">Angelika Bianca L. Upao</span>
 									<span className="block text-xs text-gray-700">Multimedia Artist & Entrepreneur</span>
