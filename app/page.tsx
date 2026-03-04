@@ -196,7 +196,7 @@ export default function Home() {
               {
                 title: "Peeling Lotion",
                 category: "Social Media",
-                img: "/images/SocialMediaGraphics/Peeling lotion Instant White.png",
+                img: "/images/SocialMediaGraphics/Peeling Lotion Instant White.PNG",
               },
               {
                 title: "Gloss Matte",
