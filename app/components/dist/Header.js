@@ -8,9 +8,8 @@ var gsap_1 = require("gsap");
 var navItems = [
     { href: "/AboutMe", label: "About Me" },
     { href: "/Projects", label: "Projects" },
-    { href: "/Vlogs", label: "Vlogs" },
+    // { href: "/Vlogs", label: "Vlogs" },
     { href: "/Contact", label: "Contact" },
-    { href: "/Achievements", label: "Achievements" },
 ];
 function Header() {
     var _a = react_1.useState(false), open = _a[0], setOpen = _a[1];

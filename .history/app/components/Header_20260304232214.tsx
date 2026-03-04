@@ -8,9 +8,9 @@ import gsap from "gsap";
 const navItems: { href: string; label: string }[] = [
 	{ href: "/AboutMe", label: "About Me" },
 	{ href: "/Projects", label: "Projects" },
-	{ href: "/Vlogs", label: "Vlogs" },
+	// { href: "/Vlogs", label: "Vlogs" },
 	{ href: "/Contact", label: "Contact" },
-	{ href: "/Achievements", label: "Achievements" },
+	// { href: "/Achievements", label: "Achievements" },
 ];
 
 export default function Header() {
