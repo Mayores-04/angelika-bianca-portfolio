@@ -54,14 +54,14 @@ export default function ContactPage() {
 	];
 
 	return (
-		<main ref={containerRef} className="min-h-screen bg-white text-gray-800">
+		<main ref={containerRef as unknown as React.RefObject<HTMLElement>} className="min-h-screen bg-white text-gray-800">
 			<section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 				<h1 data-animate="fade-up" className="text-3xl font-semibold text-center text-black">Get In Touch</h1>
 				<p data-animate="fade-up" className="text-center text-sm text-gray-600 mt-2">Have a project in mind? Let's talk about how we can bring your ideas to life!</p>
 
 				<div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
-					<div className="lg:col-span-2">
-						<div data-animate-stagger className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+					<div data-animate-stagger className="lg:col-span-2">
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 							<div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex items-start space-x-4">
 								<div className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg">
 									<MessageSquare size={20} className="text-gray-800" />
@@ -137,7 +137,7 @@ export default function ContactPage() {
 						</div>
 					</div>
 
-				<div data-animate="fade-right">
+					<div>
 						<div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
 							<h3 className="text-lg font-semibold">Send a Message</h3>
 							<form onSubmit={handleSubmit} className="mt-4 space-y-4">

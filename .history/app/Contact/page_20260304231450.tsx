@@ -137,7 +137,7 @@ export default function ContactPage() {
 						</div>
 					</div>
 
-				<div data-animate="fade-right">
+					<div>
 						<div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
 							<h3 className="text-lg font-semibold">Send a Message</h3>
 							<form onSubmit={handleSubmit} className="mt-4 space-y-4">

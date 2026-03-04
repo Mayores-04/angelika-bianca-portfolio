@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useGsapAnimation } from "../hooks/useGsapAnimation";
 
 import { useState } from "react";
+import type React from "react";
 
 export default function ProjectsPage() {
   const containerRef = useGsapAnimation();
@@ -68,7 +69,7 @@ export default function ProjectsPage() {
   const items = showAll ? allItems : allItems.slice(0, 6);
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-white text-gray-800">
+    <main ref={containerRef as React.RefObject<HTMLElement>} className="min-h-screen bg-white text-gray-800">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <h1 data-animate="fade-up" className="text-3xl font-semibold text-center text-black">
           My Designs

@@ -20,51 +20,12 @@ export default function Header() {
 
 	useEffect(() => {
 		if (!headerRef.current) return;
-
-		// Initial slide-down entrance
 		gsap.from(headerRef.current, {
 			y: -60,
 			opacity: 0,
 			duration: 0.6,
 			ease: "power3.out",
 		});
-
-		// Hide on scroll down, show on scroll up
-		let lastScrollY = window.scrollY;
-		let ticking = false;
-
-		const handleScroll = () => {
-			if (!ticking) {
-				window.requestAnimationFrame(() => {
-					const currentScrollY = window.scrollY;
-					const header = headerRef.current;
-					if (!header) return;
-
-					if (currentScrollY > lastScrollY && currentScrollY > 80) {
-						// Scrolling down — hide
-						gsap.to(header, {
-							y: -header.offsetHeight,
-							duration: 0.35,
-							ease: "power2.inOut",
-						});
-					} else {
-						// Scrolling up — show
-						gsap.to(header, {
-							y: 0,
-							duration: 0.35,
-							ease: "power2.out",
-						});
-					}
-
-					lastScrollY = currentScrollY;
-					ticking = false;
-				});
-				ticking = true;
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll, { passive: true });
-		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	const isActive = (href: string) => pathname === href;
