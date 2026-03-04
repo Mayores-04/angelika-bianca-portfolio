@@ -12,32 +12,27 @@ export default function ProjectsPage() {
   const containerRef = useGsapAnimation();
   // Collections of images discovered in public/images
   const imagesByCategory: Record<string, string[]> = {
-   
     "Social Media": [
       "/images/SocialMediaGraphics/CentellaCleanser.png",
       "/images/SocialMediaGraphics/CentellaCleanser1.png",
       "/images/SocialMediaGraphics/CentellaCleanser2.png",
       "/images/SocialMediaGraphics/CookingSpoon.png",
       "/images/SocialMediaGraphics/CookingSpoon1.png",
-      "/images/SocialMediaGraphics/GlossMatte.png",
+      "/images/SocialMediaGraphics/GlossMatte.PNG",
       "/images/SocialMediaGraphics/GlossMatte1.PNG",
       "/images/SocialMediaGraphics/KeratinSakura.png",
       "/images/SocialMediaGraphics/KeratinSakura1.png",
-      "/images/SocialMediaGraphics/Peeling lotion Instant White.PNG",
-      "/images/SocialMediaGraphics/Peeling lotion Instant White1.PNG",
+      "/images/SocialMediaGraphics/Peeling lotion Instant White.png",
+      "/images/SocialMediaGraphics/Peeling lotion Instant White1.png",
       "/images/SocialMediaGraphics/Velvet Drip.png",
       "/images/SocialMediaGraphics/Velvet Drip1.png",
     ],
-    Flyer: [
-      "/images/LayoutDesigns/Flyer/Salazar_Flyer.png",
-    ],
+    Flyer: ["/images/LayoutDesigns/Flyer/Salazar_Flyer.png"],
     "Uniquely Made": [
       "/images/UM/Medal/MEDAL.png",
       "/images/UM/Medal/MEDAL1.png",
     ],
-    Branding: [
-      "/images/Branding/Logo/Movie Munch .png",
-    ],
+    Branding: ["/images/Branding/Logo/Movie Munch .png"],
   };
 
   // Helper function to extract readable title from image path
@@ -51,16 +46,16 @@ export default function ProjectsPage() {
   };
 
   // Generate allItems dynamically from images
-  const allItems = Object.entries(imagesByCategory)
-    .flatMap(([category, images]) =>
+  const allItems = Object.entries(imagesByCategory).flatMap(
+    ([category, images]) =>
       images.map((image, index) => ({
         id: Math.random(), // Unique ID
         category,
         title: getTitleFromImage(image),
         desc: "Description placeholder",
         image,
-      }))
-    );
+      })),
+  );
 
   const [showAll, setShowAll] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -70,14 +65,23 @@ export default function ProjectsPage() {
   return (
     <main ref={containerRef} className="min-h-screen bg-white text-gray-800">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        <h1 data-animate="fade-up" className="text-3xl font-semibold text-center text-black">
+        <h1
+          data-animate="fade-up"
+          className="text-3xl font-semibold text-center text-black"
+        >
           My Designs
         </h1>
-        <p data-animate="fade-up" className="text-center text-sm text-gray-600 mt-2">
+        <p
+          data-animate="fade-up"
+          className="text-center text-sm text-gray-600 mt-2"
+        >
           A showcase of my creative work and design projects
         </p>
 
-        <div data-animate-stagger className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          data-animate-stagger
+          className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {items.map((item) => (
             <article
               key={item.id}
