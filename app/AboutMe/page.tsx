@@ -4,28 +4,30 @@ import Image from "next/image";
 import AnimatedSeparator from "../components/AnimatedSeparator";
 import { Star, Heart, Award, Zap } from "lucide-react";
 import Separator from "../components/Separator";
+import { useGsapAnimation } from "../hooks/useGsapAnimation";
 
 export default function AboutPage() {
+  const containerRef = useGsapAnimation();
   return (
-    <div className="bg-white text-gray-800">
+    <div ref={containerRef} className="bg-white text-gray-800">
       <main className="max-w-7xl mx-auto px-4 sm:px-6">
         <section className="pt-12 pb-8">
           <div className="max-w-2xl mx-auto">
-            <h1 className="text-3xl font-semibold text-center text-black">
+            <h1 data-animate="fade-up" className="text-3xl font-semibold text-center text-black">
               About Me
             </h1>
-            <p className="text-center text-sm text-gray-600 mt-2">
+            <p data-animate="fade-up" className="text-center text-sm text-gray-600 mt-2">
               Get to know the creative mind behind the designs
             </p>
           </div>
 
           <div className="mt-8 bg-gray-100 rounded-lg py-12 px-6 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full mx-auto">
-              <div className="flex justify-center">
+              <div data-animate="fade-left" className="flex justify-center">
                 <div className="relative w-80 h-90">
                   <div className="absolute left-[-55] top-15 w-60 h-72 rounded-2xl overflow-hidden z-0 ">
                     <Image
-                      src="/image/AboutMePic.png"
+                      src="/images/AboutMePic.png"
                       alt="Angelika Bianca L. Upao"
                       fill
                       className="object-contain"
@@ -35,7 +37,7 @@ export default function AboutPage() {
 
                   <div className="absolute left-34 top-0 w-60 h-76 rounded-2xl overflow-hidden z-10">
                     <Image
-                      src="/image/AboutMePic.png"
+                      src="/images/AboutMePic.png"
                       alt="Angelika Bianca L. Upao"
                       fill
                       className="object-contain"
@@ -45,7 +47,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div>
+              <div data-animate="fade-right">
                 <h2 className="text-xl font-semibold text-black">
                   Angelika Bianca L. Upao
                 </h2>
@@ -91,7 +93,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div data-animate-stagger className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm text-center border border-gray-100">
               <div className="flex items-center justify-center w-12 h-12 mx-auto bg-gray-100 rounded-full">
                 <Star size={20} className="text-gray-800" />
@@ -144,7 +146,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-8 max-w-3xl mx-auto bg-white border border-gray-100 rounded-xl p-8 shadow-sm">
+          <div data-animate="fade-up" className="mt-8 max-w-3xl mx-auto bg-white border border-gray-100 rounded-xl p-8 shadow-sm">
             <p className="text-sm text-gray-700">
               My design journey began as a creative exploration during my
               student years. What started as a hobby quickly evolved into a

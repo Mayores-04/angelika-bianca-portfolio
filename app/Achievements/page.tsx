@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Award, Calendar, MapPin, Trophy } from "lucide-react";
 import Separator from "../components/Separator";
+import { useGsapAnimation } from "../hooks/useGsapAnimation";
 
 const achievements = [
   {
@@ -41,11 +42,12 @@ const achievements = [
 ];
 
 export default function AchievementsPage() {
+  const containerRef = useGsapAnimation();
   return (
-    <div className="bg-white text-gray-800 min-h-screen">
+    <div ref={containerRef} className="bg-white text-gray-800 min-h-screen">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         {/* Header */}
-        <section className="text-center mb-12">
+        <section data-animate="fade-up" className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
             <Trophy className="w-8 h-8 text-gray-800" />
           </div>
@@ -56,7 +58,7 @@ export default function AchievementsPage() {
         </section>
 
         {/* Stats */}
-        <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+        <section data-animate-stagger className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 text-center border border-gray-200">
             <div className="text-3xl font-bold text-black">3+</div>
             <div className="text-sm text-gray-600 mt-1">Awards Received</div>
@@ -72,7 +74,7 @@ export default function AchievementsPage() {
         </section>
 
         {/* Achievements List */}
-        <section className="space-y-8">
+        <section data-animate-stagger className="space-y-8">
           {achievements.map((achievement, index) => (
             <div
               key={achievement.id}
@@ -159,7 +161,7 @@ export default function AchievementsPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="mt-16 bg-gradient-to-r from-gray-800 to-gray-600 rounded-2xl p-8 md:p-12 text-center text-white">
+        <section data-animate="scale" className="mt-16 bg-gradient-to-r from-gray-800 to-gray-600 rounded-2xl p-8 md:p-12 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Let's Create Something Award-Worthy Together!
           </h2>

@@ -1,25 +1,76 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
 
 const navItems: { href: string; label: string }[] = [
 	{ href: "/AboutMe", label: "About Me" },
 	{ href: "/Projects", label: "Projects" },
-	{ href: "/Vlogs", label: "Vlogs" },
+	// { href: "/Vlogs", label: "Vlogs" },
 	{ href: "/Contact", label: "Contact" },
-	{ href: "/Achievements", label: "Achievements" },
+	// { href: "/Achievements", label: "Achievements" },
 ];
 
 export default function Header() {
 	const [open, setOpen] = useState(false);
 	const pathname = usePathname();
+	const headerRef = useRef<HTMLElement>(null);
+
+	useEffect(() => {
+		if (!headerRef.current) return;
+
+		// Initial slide-down entrance
+		gsap.from(headerRef.current, {
+			y: -60,
+			opacity: 0,
+			duration: 0.6,
+			ease: "power3.out",
+		});
+
+		// Hide on scroll down, show on scroll up
+		let lastScrollY = window.scrollY;
+		let ticking = false;
+
+		const handleScroll = () => {
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					const currentScrollY = window.scrollY;
+					const header = headerRef.current;
+					if (!header) return;
+
+					if (currentScrollY > lastScrollY && currentScrollY > 80) {
+						// Scrolling down — hide
+						gsap.to(header, {
+							y: -header.offsetHeight,
+							duration: 0.35,
+							ease: "power2.inOut",
+						});
+					} else {
+						// Scrolling up — show
+						gsap.to(header, {
+							y: 0,
+							duration: 0.35,
+							ease: "power2.out",
+						});
+					}
+
+					lastScrollY = currentScrollY;
+					ticking = false;
+				});
+				ticking = true;
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	const isActive = (href: string) => pathname === href;
 
 	return (
-		<header className="bg-white border-b border-gray-200">
+		<header ref={headerRef} className="bg-white border-b border-gray-200 sticky top-0 z-50">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6">
 				<div className="flex items-center justify-between h-16">
 					<div className="flex items-center">

@@ -5,12 +5,10 @@ export async function POST(req: NextRequest) {
   try {
     const { name, email, subject, message } = await req.json();
 
-    // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
     }
 
-    // SMTP config from environment variables
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),

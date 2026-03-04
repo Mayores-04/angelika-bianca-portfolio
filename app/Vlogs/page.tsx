@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Separator from "../components/Separator";
+import { useGsapAnimation } from "../hooks/useGsapAnimation";
 
 const vlogs = [
   {
@@ -30,18 +31,19 @@ const vlogs = [
 ];
 
 export default function VlogsPage() {
+  const containerRef = useGsapAnimation();
   return (
-    <div className="bg-white w-full">
+    <div ref={containerRef} className="bg-white w-full">
       <div className="min-h-screen bg-white text-gray-900 py-12 px-4 sm:px-6 max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-black mb-2 text-center">
+        <h1 data-animate="fade-up" className="text-3xl font-bold text-black mb-2 text-center">
           Vlogs & Project Progress
         </h1>
-        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        <p data-animate="fade-up" className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
           Explore my creative process! Here I share vlogs and progress updates
           showing how I bring projects to life, from initial ideas to finished
           designs.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div data-animate-stagger className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {vlogs.map((vlog, idx) => (
             <div
               key={idx}

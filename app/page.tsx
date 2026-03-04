@@ -1,14 +1,16 @@
 "use client";
 import AnimatedSeparatorWave from "./components/AnimatedSeparatorWave";
 import Image from "next/image";
+import { useGsapAnimation } from "./hooks/useGsapAnimation";
 
 export default function Home() {
+	const containerRef = useGsapAnimation();
 	return (
-		<div className="min-h-screen bg-white text-gray-800">
+		<div ref={containerRef} className="min-h-screen bg-white text-gray-800">
 			<main className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 				{/* Hero */}
 				<section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-					<div className="relative flex justify-center">
+					<div data-animate="hero" className="relative flex justify-center">
 						<div className="parent">
 							<div className="card">
 								<div className="logo">
@@ -21,7 +23,7 @@ export default function Home() {
 								<div className="content">
 									<div className="w-36 h-36 rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
 										<Image 
-											src="/image/Bianca.png" 
+											src="/images/Bianca.png" 
 											alt="Angelika Bianca L. Upao" 
 											width={150}
 											height={150}
@@ -53,7 +55,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div>
+					<div data-animate="hero">
 						<h1 className="text-3xl md:text-4xl font-bold text-black">Welcome to My Portfolio!</h1>
 						<p className="mt-4 text-gray-600">
 							Hi there! I'm Angelika Bianca — an aspiring designer and creative student passionate about bringing ideas to life through design, business, and innovation. Explore my works, projects, and the things I love creating!
@@ -87,17 +89,29 @@ export default function Home() {
 				<AnimatedSeparatorWave className="mt-12" />
 
 				<section id="projects" className="mt-8">
-					<h2 className="text-2xl font-semibold text-black text-center">My Designs</h2>
-					<p className="text-center text-sm text-gray-600 mt-2">A showcase of my creative work and design projects</p>
+					<h2 data-animate="fade-up" className="text-2xl font-semibold text-black text-center">My Designs</h2>
+					<p data-animate="fade-up" className="text-center text-sm text-gray-600 mt-2">A showcase of my creative work and design projects</p>
 
-					<div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						{[1, 2, 3].map((i) => (
-							<div key={i} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-								<div className="h-40 bg-gray-200 rounded-md" />
-								<div className="mt-4">
-									<div className="text-xs text-gray-500">Branding</div>
-									<h3 className="mt-1 text-sm font-semibold text-black">Modern Business Logo</h3>
-									<p className="mt-2 text-xs text-gray-600">Professional logo design for a tech startup with modern aesthetics</p>
+					<div data-animate-stagger className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+						{[
+							{ title: "Peeling Lotion", category: "Social Media", img: "/images/SocialMediaGraphics/Peeling lotion Instant White.PNG" },
+							{ title: "Gloss Matte", category: "Social Media", img: "/images/SocialMediaGraphics/GlossMatte1.PNG" },
+							{ title: "Keratin Sakura", category: "Social Media", img: "/images/SocialMediaGraphics/KeratinSakura.png" },
+						].map((item, i) => (
+							<div key={i} className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">
+								<div className="h-40 bg-gray-200 rounded-md overflow-hidden">
+									<Image
+										src={item.img}
+										alt={item.title}
+										width={300}
+										height={160}
+										className="object-cover w-full h-full"
+									/>
+								</div>
+								<div className="p-4">
+									<div className="text-xs text-gray-500">{item.category}</div>
+									<h3 className="mt-1 text-sm font-semibold text-black">{item.title}</h3>
+									<p className="mt-2 text-xs text-gray-600">Description placeholder</p>
 								</div>
 							</div>
 						))}
@@ -111,7 +125,7 @@ export default function Home() {
 				<AnimatedSeparatorWave className="mt-12 transform rotate-180" />
 
 				<section className="mt-8">
-					<div className="rounded-xl bg-gradient-to-r from-gray-700 to-gray-400 text-white py-12 px-6 text-center shadow-md">
+					<div data-animate="scale" className="rounded-xl bg-gradient-to-r from-gray-700 to-gray-400 text-white py-12 px-6 text-center shadow-md">
 						<h2 className="text-2xl font-semibold">Let's Create Something Beautiful Together!</h2>
 						<p className="mt-2 text-sm text-gray-100">Message me now to inquire or place your order. Your ideas, my designs.</p>
 
