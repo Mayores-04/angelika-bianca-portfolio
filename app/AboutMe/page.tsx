@@ -41,7 +41,7 @@ export default function AboutPage() {
                     />
                   </div>
 
-                  <div className="absolute left-34 top-0 w-60 h-76 rounded-2xl overflow-hidden z-10">
+                  <div className="absolute left-34Dapat may tatlong folder lang, tapos nsa loob yang mga yan, Tapos wag mo lagyan ng name Yung item top-0 w-60 h-76 rounded-2xl overflow-hidden z-10">
                     <Image
                       src="/images/AboutMePic.PNG"
                       alt="Angelika Bianca L. Upao"
@@ -185,7 +185,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Separator className="mt-12" />
     </div>
   );
 }
