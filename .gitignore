@@ -20,6 +20,10 @@
 # production
 /build
 /dist
+**/dist
+
+# local history (VS Code extension)
+.history/
 
 # misc
 .DS_Store
