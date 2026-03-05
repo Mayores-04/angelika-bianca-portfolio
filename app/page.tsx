@@ -175,72 +175,95 @@ export default function Home() {
         <AnimatedSeparatorWave className="mt-12" />
 
         <section id="projects" className="mt-8">
-          <h2
-            data-animate="fade-up"
-            className="text-2xl font-semibold text-black text-center"
-          >
-            My Designs
-          </h2>
-          <p
-            data-animate="fade-up"
-            className="text-center text-sm text-gray-600 mt-2"
-          >
-            A showcase of my creative work and design projects
-          </p>
+          {/* Header — mirrors the Projects page style */}
+          <div className="text-center mb-10" data-animate="fade-up">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">
+              Portfolio
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900">My Designs</h2>
+            <p className="text-sm text-gray-500 mt-3 max-w-md mx-auto">
+              A showcase of my creative work and design projects
+            </p>
+            <div className="mt-4 mx-auto w-12 h-px bg-gray-300" />
+          </div>
 
+          {/* 6-card grid — one from each category, color-coded to match Projects page */}
           <div
             data-animate-stagger
-            className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-4"
           >
             {[
               {
-                title: "Peeling Lotion",
+                title: "Velvet Drip",
                 category: "Social Media",
-                img: "/images/SocialMediaGraphics/Peeling Lotion Instant White.png",
+                badge: "bg-violet-100 text-violet-600",
+                img: "/images/SocialMediaGraphics/Velvet Drip.png",
               },
               {
-                title: "Gloss Matte",
+                title: "Centella Cleanser",
                 category: "Social Media",
-                img: "/images/SocialMediaGraphics/GlossMatte1.png",
+                badge: "bg-violet-100 text-violet-600",
+                img: "/images/SocialMediaGraphics/CentellaCleanser.png",
               },
               {
                 title: "Keratin Sakura",
                 category: "Social Media",
+                badge: "bg-violet-100 text-violet-600",
                 img: "/images/SocialMediaGraphics/KeratinSakura.png",
               },
+              {
+                title: "Movie Munch",
+                category: "Branding",
+                badge: "bg-rose-100 text-rose-600",
+                img: "/images/Branding/Logo/Movie Munch .png",
+              },
+              {
+                title: "Salazar Flyer",
+                category: "Layout Design",
+                badge: "bg-emerald-100 text-emerald-600",
+                img: "/images/LayoutDesigns/Flyer/Salazar_Flyer.png",
+              },
+              {
+                title: "UM Medal",
+                category: "Freelancing",
+                badge: "bg-amber-100 text-amber-600",
+                img: "/images/UM/Medal/MEDAL.png",
+              },
             ].map((item, i) => (
-              <div
+              <a
                 key={i}
-                className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm"
+                href="/Projects"
+                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
               >
-                <div className="h-40 bg-gray-200 rounded-md overflow-hidden">
+                <div className="relative aspect-square bg-gray-100 overflow-hidden">
                   <Image
                     src={item.img}
                     alt={item.title}
-                    width={300}
-                    height={160}
-                    className="object-cover w-full h-full"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                 </div>
-                <div className="p-4">
-                  <div className="text-xs text-gray-500">{item.category}</div>
-                  <h3 className="mt-1 text-sm font-semibold text-black">
+                <div className="p-3">
+                  <span
+                    className={`inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full ${item.badge}`}
+                  >
+                    {item.category}
+                  </span>
+                  <h3 className="mt-1 text-sm font-semibold text-gray-800 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-xs text-gray-600">
-                    Description placeholder
-                  </p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-10 text-center">
             <a
               href="/Projects"
-              className="inline-block px-6 py-2 rounded-md bg-gray-800 text-white"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors"
             >
-              View More
+              Explore All Designs
             </a>
           </div>
         </section>

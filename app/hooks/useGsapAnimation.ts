@@ -39,81 +39,96 @@ export function useGsapAnimation() {
       });
 
       // Scroll-triggered: fade-up
-      (self.selector!('[data-animate="fade-up"]') as HTMLElement[]).forEach((el) => {
-        gsap.from(el, {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            toggleActions: "play none none none",
-          },
-        });
-      });
+      (self.selector!('[data-animate="fade-up"]') as HTMLElement[]).forEach(
+        (el) => {
+          gsap.from(el, {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          });
+        },
+      );
 
       // Scroll-triggered: fade-left
-      (self.selector!('[data-animate="fade-left"]') as HTMLElement[]).forEach((el) => {
-        gsap.from(el, {
-          x: -60,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            toggleActions: "play none none none",
-          },
-        });
-      });
+      (self.selector!('[data-animate="fade-left"]') as HTMLElement[]).forEach(
+        (el) => {
+          gsap.from(el, {
+            x: -60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          });
+        },
+      );
 
       // Scroll-triggered: fade-right
-      (self.selector!('[data-animate="fade-right"]') as HTMLElement[]).forEach((el) => {
-        gsap.from(el, {
-          x: 60,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            toggleActions: "play none none none",
-          },
-        });
-      });
+      (self.selector!('[data-animate="fade-right"]') as HTMLElement[]).forEach(
+        (el) => {
+          gsap.from(el, {
+            x: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          });
+        },
+      );
 
       // Scroll-triggered: scale-in
-      (self.selector!('[data-animate="scale"]') as HTMLElement[]).forEach((el) => {
-        gsap.from(el, {
-          scale: 0.88,
-          opacity: 0,
-          duration: 0.7,
-          ease: "back.out(1.4)",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            toggleActions: "play none none none",
-          },
-        });
-      });
+      (self.selector!('[data-animate="scale"]') as HTMLElement[]).forEach(
+        (el) => {
+          gsap.from(el, {
+            scale: 0.88,
+            opacity: 0,
+            duration: 0.7,
+            ease: "back.out(1.4)",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          });
+        },
+      );
 
       // Scroll-triggered stagger groups
-      (self.selector!("[data-animate-stagger]") as HTMLElement[]).forEach((container) => {
-        const children = Array.from(container.children) as HTMLElement[];
-        gsap.from(children, {
-          y: 40,
-          opacity: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: container,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-        });
-      });
+      (self.selector!("[data-animate-stagger]") as HTMLElement[]).forEach(
+        (container) => {
+          const children = Array.from(container.children) as HTMLElement[];
+          gsap.fromTo(
+            children,
+            { y: 40, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              stagger: 0.12,
+              ease: "power3.out",
+              clearProps: "transform,opacity",
+              scrollTrigger: {
+                trigger: container,
+                start: "top 92%",
+                toggleActions: "play none none none",
+              },
+            },
+          );
+        },
+      );
     }, containerRef);
 
     return () => ctx.revert();
