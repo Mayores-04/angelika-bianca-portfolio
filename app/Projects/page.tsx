@@ -39,9 +39,9 @@ const folders: {
     name: "Branding",
     label: "Branding",
     images: [
-      "/images/UM/UMLogo.png",
-      "/images/UM/MEDAL.png",
-      "/images/UM/MEDAL1.png",
+      "/images/Branding/UMLogo.png",
+      "/images/Branding/MEDAL.png",
+      "/images/Branding/MEDAL1.png",
     ],
     color: "bg-rose-400",
     tab: "bg-rose-300",
@@ -56,7 +56,7 @@ const folders: {
   {
     name: "Freelancing Projects",
     label: "Freelancing Projects",
-    images: ["/images/Branding/Logo/Movie Munch .png"],
+    images: ["/images/UM/Movie Munch .png"],
     color: "bg-amber-400",
     tab: "bg-amber-300",
   },

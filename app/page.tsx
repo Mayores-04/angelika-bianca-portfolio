@@ -215,7 +215,7 @@ export default function Home() {
                 title: "Movie Munch",
                 category: "Branding",
                 badge: "bg-rose-100 text-rose-600",
-                img: "/images/Branding/Logo/Movie Munch .png",
+                img: "/images/UM/Movie Munch .png",
               },
               {
                 title: "School Flyer",
@@ -227,7 +227,7 @@ export default function Home() {
                 title: "UM Medal",
                 category: "Freelancing",
                 badge: "bg-amber-100 text-amber-600",
-                img: "/images/UM/MEDAL.png",
+                img: "/images/Branding/MEDAL.png",
               },
             ].map((item, i) => (
               <a
