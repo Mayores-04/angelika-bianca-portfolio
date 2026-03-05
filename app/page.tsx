@@ -200,16 +200,16 @@ export default function Home() {
                 img: "/images/SocialMediaGraphics/Velvet Drip.png",
               },
               {
-                title: "Centella Cleanser",
+                title: "Gloss Matte Lipstick",
                 category: "Social Media",
                 badge: "bg-violet-100 text-violet-600",
-                img: "/images/SocialMediaGraphics/CentellaCleanser.png",
+                img: "/images/SocialMediaGraphics/GlossMatte.png",
               },
               {
-                title: "Keratin Sakura",
+                title: "Peeling Lotion Instant White",
                 category: "Social Media",
                 badge: "bg-violet-100 text-violet-600",
-                img: "/images/SocialMediaGraphics/KeratinSakura.png",
+                img: "/images/SocialMediaGraphics/Peeling Lotion Instant White.png",
               },
               {
                 title: "Movie Munch",
@@ -218,7 +218,7 @@ export default function Home() {
                 img: "/images/Branding/Logo/Movie Munch .png",
               },
               {
-                title: "Salazar Flyer",
+                title: "School Flyer",
                 category: "Layout Design",
                 badge: "bg-emerald-100 text-emerald-600",
                 img: "/images/LayoutDesigns/Flyer/Salazar_Flyer.png",
@@ -227,7 +227,7 @@ export default function Home() {
                 title: "UM Medal",
                 category: "Freelancing",
                 badge: "bg-amber-100 text-amber-600",
-                img: "/images/UM/Medal/MEDAL.png",
+                img: "/images/UM/MEDAL.png",
               },
             ].map((item, i) => (
               <a
@@ -250,9 +250,9 @@ export default function Home() {
                   >
                     {item.category}
                   </span>
-                  <h3 className="mt-1 text-sm font-semibold text-gray-800 leading-tight">
+                  {/* <h3 className="mt-1 text-sm font-semibold text-gray-800 leading-tight">
                     {item.title}
-                  </h3>
+                  </h3> */}
                 </div>
               </a>
             ))}
