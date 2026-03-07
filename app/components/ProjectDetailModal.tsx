@@ -97,13 +97,13 @@ export default function ProjectDetailModal({
         {/* Content */}
         <div className="p-6">
           {/* Image */}
-          <div className="mb-6 rounded-xl overflow-hidden bg-gray-100 h-96 relative group">
+          <div className="mb-6 rounded-xl overflow-hidden bg-gray-100 relative group w-full">
             <Image
               src={project.image}
               alt={project.title}
               width={600}
               height={400}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
             {/* Fullscreen button */}
             <button

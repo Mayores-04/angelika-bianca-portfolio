@@ -115,10 +115,10 @@ export default function Home() {
               Welcome to My Portfolio!
             </h1>
             <p className="mt-4 text-gray-600">
-              Hi there! I'm Angelika Bianca — an aspiring designer and creative
-              student passionate about bringing ideas to life through design,
-              business, and innovation. Explore my works, projects, and the
-              things I love creating!
+              Hi there! I'm Angelika Bianca — a multi media artist that's
+              passionate about bringing ideas to life through design, business,
+              and innovation. Explore my works, projects, and the things I love
+              creating!
             </p>
 
             <div className="mt-6 bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
