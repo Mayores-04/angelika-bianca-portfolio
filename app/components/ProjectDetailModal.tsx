@@ -104,6 +104,7 @@ export default function ProjectDetailModal({
               width={600}
               height={400}
               className="w-full h-auto object-contain"
+              priority
             />
             {/* Fullscreen button */}
             <button

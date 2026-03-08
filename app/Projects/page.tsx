@@ -198,6 +198,7 @@ export default function ProjectsPage() {
                     src={image}
                     alt={`${activeFolder.name} item ${idx + 1}`}
                     fill
+                    priority
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Overlay */}
