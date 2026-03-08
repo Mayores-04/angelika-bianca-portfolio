@@ -23,7 +23,7 @@ export default function Home() {
                 <div className="content">
                   <div className="w-36 h-36 rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
                     <Image
-                      src="/images/Bianca.PNG"
+                      src="/images/AngelikaBianca.jpg"
                       alt="Angelika Bianca L. Upao"
                       width={150}
                       height={150}
