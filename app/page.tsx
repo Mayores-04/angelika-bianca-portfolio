@@ -57,7 +57,7 @@ export default function Home() {
                   </div>
                   <div className="social-buttons-container">
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/angelicabianca.upao"
                       target="_blank"
                       rel="noopener"
                       aria-label="Facebook"
@@ -72,7 +72,7 @@ export default function Home() {
                       </svg>
                     </a>
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/iyancah_prtty/"
                       target="_blank"
                       rel="noopener"
                       aria-label="Instagram"
@@ -87,7 +87,7 @@ export default function Home() {
                       </svg>
                     </a>
                     <a
-                      href="mailto:hello@example.com"
+                      href="mailto:angelikaupao@gmail.com"
                       target="_blank"
                       rel="noopener"
                       aria-label="Email"

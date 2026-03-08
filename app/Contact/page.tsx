@@ -124,7 +124,7 @@ export default function ContactPage() {
                   <div className="mt-3">
                     <a
                       className="inline-block px-3 py-1 text-xs bg-gray-100 rounded-full border border-gray-200"
-                      href="https://t.me/yourtelegramusername"
+                      href="https://t.me/angelikabianca"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -146,7 +146,9 @@ export default function ContactPage() {
                   <div className="mt-3">
                     <a
                       className="inline-block px-3 py-1 text-xs bg-gray-100 rounded-full border border-gray-200"
-                      href="#"
+                      href="https://www.facebook.com/angelicabianca.upao"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Visit Account
                     </a>
@@ -166,7 +168,9 @@ export default function ContactPage() {
                   <div className="mt-3">
                     <a
                       className="inline-block px-3 py-1 text-xs bg-gray-100 rounded-full border border-gray-200"
-                      href="#"
+                      href="https://www.instagram.com/iyancah_prtty/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Follow
                     </a>
@@ -177,7 +181,7 @@ export default function ContactPage() {
 
             <div className="mt-10">
               <h3 className="text-lg font-semibold">
-                Other way to reach me out
+                Frequently Asked Questions
               </h3>
               <div className="mt-4 space-y-3">
                 {faqs.map((f, idx) => (
@@ -217,7 +221,7 @@ export default function ContactPage() {
                     required
                     type="email"
                     className="mt-1 w-full border border-gray-200 rounded-md px-3 py-2 text-sm"
-                    placeholder="Your Email"
+                    placeholder="Ex. youremail@example.com"
                   />
                 </div>
 
