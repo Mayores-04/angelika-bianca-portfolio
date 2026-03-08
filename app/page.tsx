@@ -115,7 +115,7 @@ export default function Home() {
               Welcome to My Portfolio!
             </h1>
             <p className="mt-4 text-gray-600">
-              Hi there! I'm Angelika Bianca — a multi media artist that's
+              Hi there! I'm Angelika Bianca — a multimedia artist that is
               passionate about bringing ideas to life through design, business,
               and innovation. Explore my works, projects, and the things I love
               creating!
