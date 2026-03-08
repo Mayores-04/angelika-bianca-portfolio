@@ -9,7 +9,7 @@ export default function Home() {
     <div ref={containerRef} className="min-h-screen bg-white text-gray-800">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         {/* Hero */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-18">
           <div data-animate="hero" className="relative flex justify-center">
             <div className="parent">
               <div className="card">
@@ -140,17 +140,17 @@ export default function Home() {
 
                 <div className="hidden sm:flex flex-col items-end">
                   <div className="text-sm text-gray-700">
-                    2+{" "}
+                    3yrs+{" "}
                     <span className="text-xs text-gray-500">
                       Years of Excellence
                     </span>
                   </div>
                   <div className="mt-2 text-sm text-gray-700">
-                    2+{" "}
+                    1k+{" "}
                     <span className="text-xs text-gray-500">Happy Clients</span>
                   </div>
                   <div className="mt-2 text-sm text-gray-700">
-                    2+{" "}
+                    1.2+{" "}
                     <span className="text-xs text-gray-500">
                       Projects Completed
                     </span>
@@ -174,7 +174,7 @@ export default function Home() {
 
         <AnimatedSeparatorWave className="mt-12" />
 
-        <section id="projects" className="mt-8">
+        <section id="projects" className="mt-8  ">
           {/* Header — mirrors the Projects page style */}
           <div className="text-center mb-10" data-animate="fade-up">
             <p className="text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">
