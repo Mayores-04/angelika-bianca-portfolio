@@ -9,7 +9,7 @@ export default function Home() {
     <div ref={containerRef} className="min-h-screen bg-white text-gray-800">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         {/* Hero */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-18">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-6 md:my-12 lg:my-18">
           <div data-animate="hero" className="relative flex justify-center">
             <div className="parent">
               <div className="card">
